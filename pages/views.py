@@ -24,7 +24,7 @@ def criar_ordem_servico(request):
             return redirect('ordem_servico_confirmacao') # Redirecione para a página de confirmação
     else:
         form = OrdemServicoForm()
-    return render(request, 'pages/principal.html', {'form': form})
+    return render(request, 'pages/ordem_servico/ordem_servico_registro.html', {'form': form})
 
 
 @login_required
