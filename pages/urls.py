@@ -17,7 +17,7 @@ urlpatterns = [
 
     #path('', RedirectView.as_view(pattern_name='criar_ordem_servico'), name='index'),
     path('ordem_servico_registro', views.criar_ordem_servico, name='ordem_servico_registro'),
-    path('admin/', admin.site.urls),  # Adiciona as URLs do painel de administração
+    #path('admin/', admin.site.urls),  # Adiciona as URLs do painel de administração
     path('ordem_servico_confirmacao/', views.ordem_servico_confirmacao, name='ordem_servico_confirmacao'),
     path('emitir_planilha/<int:mes>/<int:ano>/', views.emitir_planilha, name='emitir_planilha'),
     path('historico_ordem_servico/', views.historico_ordem_servico, name='historico_ordem_servico'),
