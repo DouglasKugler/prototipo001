@@ -92,3 +92,13 @@ def profile(request):
 def proposta(request):
     return render(request, 'pages/grup1/teste01.html')
 
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redireciona para a página de login
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'pages/registration/register.html', {'form': form})
+
